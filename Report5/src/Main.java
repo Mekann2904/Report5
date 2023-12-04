@@ -5,7 +5,12 @@ public class Main {
             String str = null;
     
             // 条件2: str.length() の内容を表示しようとする。
-            System.out.println(str.length()); // ここで NullPointerException が発生するはず
+            try{
+                System.out.println(str.length()); // ここで NullPointerException が発生するはず
+            }catch(NullPointerException e){
+                //NullPointerExceptionが発生した場合の処理
+                System.out.println("NullPointerExceptionが発生しました。"+e.getMessage());
+            }
         }
     }
     
